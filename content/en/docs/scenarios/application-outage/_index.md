@@ -9,11 +9,12 @@ weight: 3
 <krkn-hub-scenario id="application-outages">
 Scenario to block the traffic ( Ingress/Egress ) of an application matching the labels for the specified duration of time to understand the behavior of the service/other services which depend on it during downtime. This helps with planning the requirements accordingly, be it improving the timeouts or tweaking the alerts etc.
 </krkn-hub-scenario>
-You can add in your applications URL into the [health checks section](../../krkn/config.md#health-checks) of the config to track the downtime of your application during this scenario 
+
+You can add in your applications URL into the [health checks section](/docs/krkn/config/#health-checks) of the config to track the downtime of your application during this scenario 
 
 ### Rollback Scenario Support
 
-Krkn supports rollback for Application outages. For more details, please refer to the [Rollback Scenarios](../../rollback-scenarios/_index.md) documentation.
+Krkn supports rollback for Application outages. For more details, please refer to the [Rollback Scenarios](/docs/rollback-scenarios/) documentation.
 
 ### Debugging steps in case of failures
 Kraken creates a network policy blocking the ingress/egress traffic to create an outage, in case of failures before reverting back the network policy, you can delete it manually by executing the following commands to stop the outage:
